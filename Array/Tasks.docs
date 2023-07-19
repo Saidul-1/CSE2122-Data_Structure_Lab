@@ -1,0 +1,31 @@
+Array:
+
+1.Traversing: carry out the following operations on an Array 
+  a) Maximum Value b) Minimum Value c) Average Value d) Total Value e) Sin Value 
+  
+2.Inserting: Insert
+  a) 54 to a sorted array. b) Rahim to a sorted array. c) 99 to position 5. d) Karim to position 5. 
+  
+3.Deleting:
+  a) Delete Karim from a sorted array. b) Delete an Item from position 2. 
+    
+4.Sorting:
+  a) Sort integer data using Bubble sort. b) Sort string data using Bubble sort. 
+    
+5.Searching:
+  a) Search for 77 using Linear/Binary Search. b) Search for Karim using Linear/Binary Search.
+    
+6.Merging:
+  a) Add two integer type arrays. b) Add two character type arrays. 
+    
+7.2D-Array-to-Linear-Array:
+  a) Copy elements of a 2D array into a 1D/linear array. b) Print the elements of group 3 from the 1D array. 
+    
+8.Matrix: 
+  a) Addition, Subtraction and Multiplication of two matrices. 
+    
+9.Sparse-Matrix: 
+  a) Store the element of a Triangular matrix into a 1D array. b) locate the elements A[3][2] in the linear array. 
+  c) Print the elements of row 4 from the linear array.
+
+
