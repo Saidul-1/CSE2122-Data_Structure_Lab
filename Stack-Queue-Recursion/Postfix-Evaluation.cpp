@@ -1,4 +1,4 @@
-// infix to postfix notation(single-digit)
+/* Find the value of an Arithmetic expression(single-digit) written in Postfix notation */
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -29,7 +29,7 @@ int postfixEvaluation(string postfix){
 			else if(postfix[i] == '/'){
 				operand.push(operand1 / operand2);
 			}
-			else{
+			else if(postfix[i] == '^'){
 				operand.push(pow(operand1, operand2));
 			}
 		}

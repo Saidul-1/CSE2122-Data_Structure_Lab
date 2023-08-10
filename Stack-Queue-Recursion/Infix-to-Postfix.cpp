@@ -1,4 +1,4 @@
-// infix to postfix notation(single-digit)
+/* Transform an Infix expression into Postfix expression(single-digit) */
 #include<bits/stdc++.h>
 using namespace std;
 

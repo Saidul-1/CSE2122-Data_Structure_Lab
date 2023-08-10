@@ -1,4 +1,4 @@
-// Delete the top Item from a Stack
+/* Delete the top element from a Stack */
 #include <bits/stdc++.h>
 using namespace std;
 

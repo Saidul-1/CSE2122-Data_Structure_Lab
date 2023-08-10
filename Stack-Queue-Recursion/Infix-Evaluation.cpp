@@ -1,3 +1,4 @@
+// infix -> postfix -> evaluation (single-digit)
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -28,7 +29,7 @@ int postfixEvaluation(string postfix){
 			else if(postfix[i] == '/'){
 				operand.push(operand1 / operand2);
 			}
-			else{
+			else if(postfix[i] == '^'){
 				operand.push(pow(operand1, operand2));
 			}
 		}

@@ -1,0 +1,4 @@
+1.  	Write a program to store some data (54, 26, 93, 17, 77, 31, 44, 55, 20) to a hash table (Size of hash table is a prime number). While storing data if there is a collision use the Linear Probing technique. Next search for an item. [Rewrite the program for (i) plus 3 probing (ii) Quadratic Probing and (iii) Chaining.]
+ 
+2.  	Write a program to store some data to a hash table (Size of hash table is a prime number). Before storing data perform the Folding Method/Mid Square Method/Character-Based Method Hash function. While storing data if there is a collision use the Linear Probing technique. Next search for an item. [Rewrite the program for (i) plus 3 probing (ii) Quadratic Probing and (iii) Chaining.]
+
