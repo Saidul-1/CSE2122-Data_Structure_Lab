@@ -6,37 +6,35 @@ map<char, int>precedence = {
     {'+', 1}, {'-', 1}, {'*', 2}, {'/', 2}, {'^', 3}
 };
 int postfixEvaluation(string postfix){
-	int firstDigit, secondDigit, result = 0;
-	stack<int>digits;
-	int length = postfix.size();
-	for(int i=0;i<length;i++){
+	stack<int>operand;
+	int operand1, operand2;
+	for(int i=0; i<postfix.size(); i++){
 		if(postfix[i] != '+' && postfix[i] != '-' && postfix[i] != '*' && postfix[i] != '/' && postfix[i] != '^'){
-			digits.push(postfix[i]-'0');
+			operand.push(postfix[i]-'0');
 		}
 		else{
-			secondDigit = digits.top();
-			digits.pop();
-			firstDigit = digits.top();
-			digits.pop();
+			operand2 = operand.top();
+			operand.pop();
+			operand1 = operand.top();
+			operand.pop();
 			if(postfix[i] == '+'){
-				result = firstDigit+secondDigit;
+				operand.push(operand1 + operand2);
 			}
-			if(postfix[i] == '-'){
-			result = firstDigit-secondDigit;
+			else if(postfix[i] == '-'){
+				operand.push(operand1 - operand2);
 			}
-			if(postfix[i] == '*'){
-			result = firstDigit*secondDigit;
+			else if(postfix[i] == '*'){
+				operand.push(operand1 * operand2);
 			}
-			if(postfix[i] == '/'){
-			result = firstDigit/secondDigit;
+			else if(postfix[i] == '/'){
+				operand.push(operand1 / operand2);
 			}
-			if(postfix[i] == '^'){
-			result = firstDigit^secondDigit;
+			else{
+				operand.push(pow(operand1, operand2));
 			}
-			digits.push(result);
 		}
 	}
-	return digits.top();
+	return operand.top();
 }
 int main(){
 	string postfix;
