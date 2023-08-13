@@ -1,6 +1,7 @@
 /* Write a program to insert an element in a Binary search tree;
 If the element is already inserted before then display the location. */
-#include<bits/stdc++.h>
+#include<iostream>
+#include<math.h>
 using namespace std;
 
 int binTree[100] = {0};
@@ -36,7 +37,7 @@ void displayTree(int tree[], int size){		//works better with single-digit nodes.
 			while(space--){
 				cout<<" ";
 			}
-			cout<<binTree[(1<<i)-1+j];
+			cout<<tree[(1<<i)-1+j];
 		}
 		for(lineGap=0; lineGap<(level-i-1); lineGap++){
 			cout<<"\n";
