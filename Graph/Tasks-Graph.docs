@@ -1,0 +1,19 @@
+1. Write a program that takes an Adjacent matrix A with m vertices as input and output the following:
+	a) adjacent of V1, V2,.................,Vm
+	b) no. of paths of length 2 from Vi to Vj.
+	c) no. of paths of length 3 from Vi to Vj.
+	d) no. of paths of length 4 from Vi to Vj.
+ 
+2. Take adjacency matrix with m nodes as input and calculate Br and from that calculate Path Matrix and tell whether the matrix is strongly connected or not.
+
+3. Find out the Path Matrix of an adjacent matrix with m nodes using Warshall’s Algorithm. 
+
+4. Find out the shortest path of a Weighted Graph G with m nodes V1, V2, … ,Vm and weight of each edge is w(e) using Warshall’s Algorithm. 
+
+5. Write a program to create a Linked Representation of Graph, enter some data and read those data from the Graph. 
+
+6. Write a program to traverse a Graph represented in Linked List using Breadth-First Search.
+
+7. Write a program to traverse a Graph represented in Linked List using Depth-First Search.
+
+
