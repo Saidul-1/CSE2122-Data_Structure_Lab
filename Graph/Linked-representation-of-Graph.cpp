@@ -1,4 +1,4 @@
-/* 5. Write a program to create a Linked Representation of Graph. 
+/* Write a program to create a Linked Representation of Graph. 
 	Enter some data and read those data from the Graph. */
 #include<bits/stdc++.h>
 using namespace std;
