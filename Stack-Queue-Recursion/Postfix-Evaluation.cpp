@@ -2,39 +2,53 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-map<char, int>precedence = { 
-    {'+', 1}, {'-', 1}, {'*', 2}, {'/', 2}, {'^', 3}
-};
+int calculate(int operand1, int operand2, char sign){
+	switch(sign){
+		case '+':
+			return operand1 + operand2;
+		case '-':
+			return operand1 - operand2;
+		case '*':
+			return operand1 * operand2;
+		case '/':
+			return operand1 / operand2;
+		case '^':
+			int result = 1;
+			while(operand2--){
+				result *= operand1;
+			}
+			return result;
+	}
+	cout<<"Something went wrong!\n";
+	exit(1);
+}
+int push(int stack[], int top, int value){
+	stack[++top] = value;
+	return top;
+}
+int pop(int stack[], int top){
+	return --top;
+}
 int postfixEvaluation(string postfix){
-	stack<int>operand;
-	int operand1, operand2;
+	int operandStack[100];
+	int top = -1, operand1, operand2;
 	for(int i=0; i<postfix.size(); i++){
-		if(postfix[i] != '+' && postfix[i] != '-' && postfix[i] != '*' && postfix[i] != '/' && postfix[i] != '^'){
-			operand.push(postfix[i]-'0');
+		if(postfix[i] >= '0' && postfix[i] <= '9'){
+			top = push(operandStack, top, postfix[i]-'0'); //integer value of the char type digit
+		}
+		else if(postfix[i] == '+' || postfix[i] == '-' || postfix[i] == '*' || postfix[i] == '/' || postfix[i] == '^'){
+			operand2 = operandStack[top];
+			top = pop(operandStack, top);
+			operand1 = operandStack[top];
+			top = pop(operandStack, top);
+			top = push(operandStack, top, calculate(operand1, operand2, postfix[i]));
 		}
 		else{
-			operand2 = operand.top();
-			operand.pop();
-			operand1 = operand.top();
-			operand.pop();
-			if(postfix[i] == '+'){
-				operand.push(operand1 + operand2);
-			}
-			else if(postfix[i] == '-'){
-				operand.push(operand1 - operand2);
-			}
-			else if(postfix[i] == '*'){
-				operand.push(operand1 * operand2);
-			}
-			else if(postfix[i] == '/'){
-				operand.push(operand1 / operand2);
-			}
-			else if(postfix[i] == '^'){
-				operand.push(pow(operand1, operand2));
-			}
+			cout<<"Invalid Exprassion!\n";
+			exit(1);
 		}
 	}
-	return operand.top();
+	return operandStack[top];
 }
 int main(){
 	string postfix;
