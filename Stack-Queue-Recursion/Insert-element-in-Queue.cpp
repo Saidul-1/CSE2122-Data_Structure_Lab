@@ -2,17 +2,19 @@
 #include<iostream>
 using namespace std;
 
-int maxSize = 10, front = 0, rear = 0;
+int maxSize = 10, front = 0, rear = 0, queueSize = 0;
 void insert(int queue[], int value){
-	if(rear >= maxSize){
+	if(queueSize == maxSize){
 		cout<<"Overflow!\n";
-		exit(0);
+		exit(1);
 	}
-	queue[rear++] = value;
+	queue[rear] = value;
+	rear = (rear+1)%maxSize;
+	queueSize++;
 }
 void display(int queue[]){
-	for(int i = front; i < rear; i++){
-		cout<<queue[i]<<" ";
+	for(int i = 0; i < queueSize; i++){
+		cout<<queue[(front+i)%maxSize]<<" ";
 	}
 	cout<<"\n";
 }

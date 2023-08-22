@@ -19,7 +19,7 @@ void towerOfHanoy(int begin, int end, int middle, int disks){
 int main(){
 	int disks;
 	cin>>disks;
-	cout<<"Number of steps: "<<totalSteps(disks)<<"\n";
+	cout<<"Number of steps: "<<totalSteps(disks)<<"\n";//(2^disks)-1
 	towerOfHanoy(1, 3, 2, disks);
 	return 0;
 }

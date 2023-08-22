@@ -11,15 +11,18 @@ long factorial(int n){
 }
 int main()
 {
-    int num, sign;
+    int num, sign = 1;
     cout<<"Enter the number:\n";
     cin>>num;
-    sign = num / abs(num);
+    if(num<0){
+	    sign = -1;
+	    num *= -1;
+	}
     if(num > 20){
         "Overflow!\nThe number should be less than 20\n";
     }
     else{
-        cout<<"Factorial of "<<num<<" = "<<sign*factorial(abs(num))<<"\n";
+        cout<<"Factorial of "<<(sign*num)<<" = "<<(sign*factorial(num))<<"\n";
     }
     return 0;
 }

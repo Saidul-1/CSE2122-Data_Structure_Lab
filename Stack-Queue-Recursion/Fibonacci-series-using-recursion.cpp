@@ -20,9 +20,14 @@ int main()
     int num;
     cout<<"Enter a number:\n";
     cin>>num;
-    fibonacci(num);
+    if(num<0){
+    	cout<<"The number can't be negative.\n";
+    	exit(1);
+    }	
+    cout<<"First "<<num<<" nubers of the fibonacci series:\n";
+    fibonacci(num-1);
     // print the values
-    for(int i=0;i<=num;i++){
+    for(int i=0;i<num;i++){
         cout<<fib_series[i]<<" ";
     }
     cout<<"\n";
