@@ -7,10 +7,10 @@ using namespace std;
 int hashTable[tableSize];
 bool isOccupied[tableSize] = {false};
 int hashFunction(int data){
-	if(data<10){
+	data *= data;
+	if(data<100){
 		return data;
 	}
-	data *= data;
 	int length = log10(abs(data))+1;
 	if(length % 2){
 		data /= pow(10,length / 2);
