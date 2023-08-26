@@ -47,7 +47,9 @@ int main(){
 	int path = 0;
 	for(int i=0; i<vertex; i++){
 		for(int j=0; j<vertex; j++){
-			path += pathMat[i][j];
+			if(pathMat[i][j]>0){
+				path++;
+			}
 		}
 	}
 	if(vertex == 1 || path == vertex*vertex){
