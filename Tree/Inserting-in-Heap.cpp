@@ -1,4 +1,4 @@
-/* Write a program to insert an element into the heap(max-heap is used. */
+/* Write a program to insert an element into the heap(max-heap is used). */
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -29,7 +29,7 @@ void displayTree(int tree[], int size){		//works better with single-digit nodes.
 			}
 			cout<<tree[(1<<i)-1+j];
 		}
-		for(lineGap=0; lineGap<(level-i-1); lineGap++){
+		for(lineGap=0; lineGap<(1<<(level-i-2)); lineGap++){
 			cout<<"\n";
 		}
 	}

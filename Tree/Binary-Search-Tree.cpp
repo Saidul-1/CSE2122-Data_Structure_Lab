@@ -39,18 +39,23 @@ void displayTree(int tree[], int size){		//works better with single-digit nodes.
 			}
 			cout<<tree[(1<<i)-1+j];
 		}
-		for(lineGap=0; lineGap<(level-i-1); lineGap++){
+		for(lineGap=0; lineGap<(1<<(level-i-2)); lineGap++){
 			cout<<"\n";
 		}
 	}
+	cout<<"\n";
 }
 int main(){
-	int data[] = {5, 9, 0, 3, 1, 2, 6, 1, 4, 7};
-	int pos, mxSize = 0;
-	for(int i=0; i<10; i++){
+	int data[] = {5, 9, 0, 3, 1};
+	int toInsert, pos, mxSize = 0;
+	for(int i=0; i<5; i++){
 		pos = insert(data[i]);
 		mxSize = max(mxSize,pos);
 	}
+	displayTree(binTree, mxSize);
+	cout<<"\nEnter a number to insert:\n";
+	cin>>toInsert;
+	mxSize = max(mxSize,insert(toInsert));
 	displayTree(binTree, mxSize);
 	return 0;
 }

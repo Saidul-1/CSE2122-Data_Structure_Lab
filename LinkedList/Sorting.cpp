@@ -5,18 +5,19 @@ using namespace std;
 
 struct node{
     int info;
-    struct node *next = NULL;
+    struct node *next;
 };
 typedef struct node *nodeptr;
 
 nodeptr newNode (int inf){	//create a new node and return the pointer 
-    nodeptr p = (nodeptr) malloc (sizeof (struct node));
-    if (p == NULL){
+    nodeptr ptr = (nodeptr) malloc (sizeof (struct node));
+    if (ptr == NULL){
         cout << "Memory Allocation Failed!\n";
         exit (1);
     }
-    p->info = inf;
-    return p;
+    ptr->info = inf;
+    ptr->next = NULL;
+    return ptr;
 }
 void print (nodeptr start){
     for (nodeptr curr = start; curr != NULL; curr = curr->next){

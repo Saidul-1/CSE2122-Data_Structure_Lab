@@ -1,13 +1,13 @@
 Linked List:
 
-1.    Create a Linked List and store the value 5, 3, 9, 42, 0, 10.
+1.	Create a Linked List and store the value 5, 3, 9, 42, 0, 10.
  
-2.    Traversing: Travarse the linked list and find the maximum, minimum, total and average value.
+2.	Traversing: Travarse the linked list and find the maximum, minimum, total and average value.
  
-3.	  Inserting: Insert an element in a specific position and in a sorted linked list
+3.	Inserting: Insert an element in a specific position and in a sorted linked list
 
-4.	  Deleting: Delete an element from a specific position and from a sorted linked list
+4.	Deleting: Delete an element from a specific position and from a sorted linked list
   
-5.    Sorting: Sort the contents of a linked list.
+5.	Sorting: Sort the contents of a linked list.
   
-6.    Searching: search for an element in a linked list.
+6.	Searching: search for an element in a linked list.

@@ -10,7 +10,7 @@ int hashFunction(int data){
 	int sum = 0;
 	while(data>0){
 		sum += data%100;
-		data/=100;
+		data /= 100;
 	}
 	return sum % tableSize;
 }

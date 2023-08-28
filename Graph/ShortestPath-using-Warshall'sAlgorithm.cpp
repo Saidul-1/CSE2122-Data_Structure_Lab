@@ -27,14 +27,20 @@ int main(){
 	for(i=0; i<vertex; i++){
 		for(j=0; j<vertex; j++){
 			cin>>weight[i][j];
-			if(weight[i][j]==0){shortestPath[i][j]=INF;}
-			else{shortestPath[i][j]=weight[i][j];}
+			if(weight[i][j]==0){
+				shortestPath[i][j]=INF;
+			}
+			else{
+				shortestPath[i][j]=weight[i][j];
+			}
 		}
 	}
 	for(k=0;k<vertex;k++){
 		for(i=0;i<vertex;i++){
 			for(j=0;j<vertex;j++){
-				shortestPath[i][j] = min(shortestPath[i][j] , (shortestPath[i][k] + shortestPath[k][j]));
+				if(shortestPath[i][j] > (shortestPath[i][k] + shortestPath[k][j])){
+					shortestPath[i][j] = (shortestPath[i][k] + shortestPath[k][j]);
+				}	
 			}
 		}
 	}

@@ -6,7 +6,7 @@ using namespace std;
 
 struct node{
 	string info;
-	struct node* next = NULL;
+	struct node* next;
 };
 typedef struct node* nodeptr;
 nodeptr hashTable[tableSize];
@@ -17,7 +17,8 @@ nodeptr newNode(string data){
 		cout<<"Memory Limit Exit";
 		exit(0);
 	}
-	ptr -> info = data;
+	ptr->info = data;
+	ptr->next = NULL;
 	return ptr;
 }
 int hashFunction(string data){
@@ -31,7 +32,7 @@ bool search(string data){
 	int index = hashFunction(data);
 	nodeptr tmp = hashTable[index];
 	while(tmp != NULL){
-		if(tmp -> info == data){
+		if(tmp->info == data){
 			return true;
 		}
 		tmp = tmp->next;
